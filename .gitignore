@@ -9,6 +9,10 @@ pnpm-debug.log*
 # dist/ - We want to commit dist for GitHub Pages
 build/
 
+# Ignore root index.html (development template)
+# GitHub Pages should only use dist/index.html
+/index.html
+
 # Environment variables
 .env
 .env.local

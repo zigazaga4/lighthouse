@@ -11,23 +11,12 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
-    minify: false,
-    target: 'es2015',
+    minify: 'terser',
     rollupOptions: {
       output: {
-        format: 'iife',
-        name: 'LighthouseChurch',
-        inlineDynamicImports: true,
-        entryFileNames: 'assets/app.js',
-        chunkFileNames: 'assets/[name].js',
-        assetFileNames: 'assets/[name].[ext]'
+        manualChunks: undefined
       }
     }
   },
-  base: './',
-  resolve: {
-    alias: {
-      'vue': 'vue/dist/vue.global.js'
-    }
-  }
+  base: './'
 })
