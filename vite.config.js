@@ -14,9 +14,11 @@ export default defineConfig({
     minify: 'terser',
     target: 'es2015',
     rollupOptions: {
+      external: [],
       output: {
         manualChunks: undefined,
-        format: 'es'
+        format: 'iife',
+        name: 'LighthouseChurch'
       }
     }
   },
