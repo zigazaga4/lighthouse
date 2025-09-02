@@ -12,13 +12,7 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     minify: 'terser',
-    target: 'es2015',
-    rollupOptions: {
-      output: {
-        format: 'umd',
-        name: 'LighthouseChurch'
-      }
-    }
+    target: 'es2015'
   },
   base: './'
 })
